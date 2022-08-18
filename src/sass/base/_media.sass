@@ -21,8 +21,10 @@
 
 @media (max-width: 767px)
     .header
-        &__logo img
-            width: 90%
+        justify-content: space-around
+        flex-direction: column
+        &__logo
+            margin-bottom: 10px
         &__phone
             font-size: 14px
             line-height: 14px
@@ -31,14 +33,52 @@
             width: 380px
         &__link
             font-size: 15px
+        &__wrapper
+            align-items: center
+        &__header
+            text-align: center
+            font-size: 35px
+        &__subheader
+            text-align: center
+            font-size: 18px
     .button
         width: 120px
         height: 26px
         font-size: 11px
         &.button_main
-            width: 280px
+            width: 260px
             height: 45px
-            font-size: 15px
+            font-size: 14px
             line-height: 20px
-            margin-top: 60px
+            margin-top: 40px
+        &_submit
+            width: 100%
+            height: 60px
+            font-weight: 500
+            font-size: 16px
+    .hidden
+        display: none
+    .title
+        &_left
+            font-size: 32px
+            line-height: 40px
 @media (max-width: 575px)
+    .promo
+        &__icons
+            width: 100%
+    .title
+        &_left
+            text-align: center
+            font-size: 28px
+            line-height: 35px
+    .consultation
+        &__wrapper
+            display: flex
+            flex-direction: column
+            align-items: center
+        &__descr
+            text-align: center
+            font-size: 17px
+            line-height: 25px
+    .feed__form
+        width: 270px
