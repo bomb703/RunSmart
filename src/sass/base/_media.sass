@@ -57,12 +57,24 @@
             height: 60px
             font-weight: 500
             font-size: 16px
+        &_mini
+            width: 135px
+            height: 44px
+            font-size: 14px
+            line-height: 22px
     .hidden
         display: none
     .title
         &_left
             font-size: 32px
             line-height: 40px
+    .catalog
+        &__tabs
+            flex-direction: column
+        &__tab
+            margin-bottom: 15px
+            &:last-child
+                margin-bottom: 0
 @media (max-width: 575px)
     .promo
         &__icons
