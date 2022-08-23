@@ -6,7 +6,7 @@ const slider = tns({
     autoplayHoverPause: true,
     autoplayButtonOutput: false,
     speed: 1000,
-    autoHeight: false,
+    autoHeight: true,
     nav: false,
     navPosition: 'bottom',
 
