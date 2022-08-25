@@ -29,6 +29,8 @@
         &__phone
             font-size: 14px
             line-height: 14px
+            &:hover
+                color: #fff
     .promo
         &__icons
             width: 380px
@@ -75,6 +77,10 @@
             margin-bottom: 15px
             &:last-child
                 margin-bottom: 0
+            &:hover
+                box-shadow: 2px 2px 20px #808080
+        &__link:hover
+            color: $main-color
     .reviews-item
         flex-direction: column
         margin-top: 60px
@@ -108,6 +114,8 @@
             line-height: 25px
     .feed__form
         width: 270px
+        &_modal
+            width: 260px
     .footer
         &__info
             width: 100%
@@ -121,3 +129,13 @@
                 text-decoration: none
         &__address
             font-size: 18px
+    .button
+        &_submit
+            height: 50px
+    .modal
+        width: 320px
+        padding: 33px 25px 35px 25px
+        &__close
+            top: 15px
+            right: 10px
+            font-size: 45px

@@ -19,7 +19,7 @@ const slider = tns({
         },
     }
 });
-
+// tabs
 document.querySelector('.prev').addEventListener('click', function () {
     slider.goTo('prev');
 });
@@ -28,8 +28,9 @@ document.querySelector('.next').addEventListener('click', function () {
     slider.goTo('next');
 });
 
-
+//catalog
 (function ($) {
+
     $(function () {
 
         $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function () {
@@ -52,4 +53,47 @@ document.querySelector('.next').addEventListener('click', function () {
         toggleSlide('.catalog-item__link')
         toggleSlide('.catalog-item__back')
     });
+
+    // modal
+
+    $('[data-modal=consultation').on('click', function () {
+        $('.overlay, #consultation').fadeIn('fast');
+    });
+    $('.modal__close').on('click', function () {
+        $('.overlay, #consultation, #thanks, #order').fadeOut('fast')
+    });
+    $('.button_order').each(function (i) {
+        $(this).on('click', function () {
+            $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+            $('.overlay, #order').fadeIn('fast');
+        })
+    });
+
+    function validateForms(form) {
+        $(form).validate({
+            rules: {
+                name: "required",
+                tel: "required",
+                email: {
+                    required: true,
+                    email: true,
+                },
+            },
+            messages: {
+                name: "Пожалуйста, введите своё имя",
+                tel: "Пожалуйста, введите номер телефона",
+                email: {
+                    required: "Пожалуйста, введите свою почту",
+                    email: "Неправильно введён адрес"
+                }
+            }
+        });
+    };
+
+    validateForms('#consultation-form');
+    validateForms('#consultation form');
+    validateForms('#order form');
+
+    $('input[name=tel]').mask("+372 (999) 999-9999")
+
 })(jQuery);
