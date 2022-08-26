@@ -73,7 +73,7 @@ document.querySelector('.next').addEventListener('click', function () {
         $(form).validate({
             rules: {
                 name: "required",
-                tel: "required",
+                phone: "required",
                 email: {
                     required: true,
                     email: true,
@@ -81,7 +81,7 @@ document.querySelector('.next').addEventListener('click', function () {
             },
             messages: {
                 name: "Пожалуйста, введите своё имя",
-                tel: "Пожалуйста, введите номер телефона",
+                phone: "Пожалуйста, введите номер телефона",
                 email: {
                     required: "Пожалуйста, введите свою почту",
                     email: "Неправильно введён адрес"
@@ -94,6 +94,36 @@ document.querySelector('.next').addEventListener('click', function () {
     validateForms('#consultation form');
     validateForms('#order form');
 
-    $('input[name=tel]').mask("+372 (999) 999-9999")
+    $('input[name=phone]').mask("+372 (999) 999-9999")
 
+    $('form').submit(function (e) {
+        e.preventDefault();
+
+        if (!$(this).valid()) {
+            return;
+        }
+
+        $.ajax({
+            type: "POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize(),
+        }).done(function () {
+            $(this).find("input").val("");
+            $('#consultation, #order').fadeOut();
+            $('.overlay, #thanks').fadeIn('fast')
+
+            $('form').trigger('reset');
+        });
+        return false;
+    });
+
+    // scroll
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 1600) {
+            $('.pageup').fadeIn('fast');
+        } else {
+            $('.pageup').fadeOut('fast');
+        }
+    })
 })(jQuery);

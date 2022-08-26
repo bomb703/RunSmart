@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>RunSmart</title>
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
-    <section class="promo">
+    <section id="up" class="promo">
         <div class="container">
             <header class="header">
                 <a href="#" class="header__logo">
@@ -76,7 +77,8 @@
             </h3>
             <div class="benefits__wrapper">
                 <div class="benefits__item">
-                    <img src="icons/icon-cup.jpg" alt="cup">
+                    <img src="icons/icon-cup.jpg" class="animate__animated animate__tada animate__infinite"
+                        alt="cup-icon">
                     <h4 class="benefits__item-title">
                         Делимся опытом
                     </h4>
@@ -87,7 +89,8 @@
                 </div>
 
                 <div class="benefits__item">
-                    <img src="icons/icon-heart.jpg" alt="cup">
+                    <img src="icons/icon-heart.jpg" class="animate__animated animate__heartBeat animate__infinite"
+                        alt="heart-icon">
                     <h4 class="benefits__item-title">
                         Заботимся о здоровье
                     </h4>
@@ -98,7 +101,8 @@
                 </div>
 
                 <div class="benefits__item">
-                    <img src="icons/icon-shoe.jpg" alt="cup">
+                    <img src="icons/icon-shoe.jpg" class="animate__animated animate__wobble animate__infinite"
+                        alt="shoe-icon">
                     <h4 class="benefits__item-title">
                         Учим бегать
                     </h4>
@@ -123,16 +127,16 @@
                     Просто заполните форму заявки <br> и мы перезвоним вам в течении 10 минут
                 </p>
                 <form id="consultation-form" action="#" method="post" class="feed__form">
-                    <input placeholder="Ваше имя" required type="text" name="name">
-                    <input placeholder="Ваш телефон" required name="tel">
-                    <input placeholder="Ваш E-mail" required type="email" name="email">
+                    <input placeholder="Ваше имя" type="text" name="name">
+                    <input placeholder="Ваш телефон" name="phone">
+                    <input placeholder="Ваш E-mail" type="email" name="email">
                     <button class="button_submit button">заказать консультацию</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <section class="slider">
+    <div class="slider">
         <div class="container">
             <div class="slider__inner">
                 <div><img src="img/slide-1.jpg" alt="slide-1"></div>
@@ -143,7 +147,7 @@
             <button type="button" class="next hidden_slider"><img src="icons/arrow-right.png"
                     alt="arrow-right"></button>
         </div>
-    </section>
+    </div>
 
     <section class="catalog" id="catalog_link">
         <div class="container">
@@ -166,7 +170,8 @@
 
             <div class="catalog__content catalog__content_active">
 
-                <div class="catalog-item">
+                <div class="catalog-item animate__animated animate__fadeIn wow" data-wow-duration="0.7s"
+                    data-wow-delay="0.6s">
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
                             <img src="img/catalog-item.jpg" alt="pulsometr" class="catalog-item__img">
@@ -212,7 +217,8 @@
                     </div>
                 </div>
 
-                <div class="catalog-item">
+                <div class="catalog-item animate__animated animate__fadeIn wow" data-wow-duration="0.7s"
+                    data-wow-delay="0.6s">
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
                             <img src="img/catalog-item.jpg" alt="pulsometr" class="catalog-item__img">
@@ -258,7 +264,8 @@
                     </div>
                 </div>
 
-                <div class="catalog-item">
+                <div class="catalog-item animate__animated animate__fadeIn wow" data-wow-duration="0.7s"
+                    data-wow-delay="0.6s">
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
                             <img src="img/catalog-item.jpg" alt="pulsometr" class="catalog-item__img">
@@ -304,7 +311,8 @@
                     </div>
                 </div>
 
-                <div class="catalog-item">
+                <div class="catalog-item animate__animated animate__fadeIn wow" data-wow-duration="0.7s"
+                    data-wow-delay="0.6s">
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
                             <img src="img/catalog-item.jpg" alt="pulsometr" class="catalog-item__img">
@@ -350,7 +358,8 @@
                     </div>
                 </div>
 
-                <div class="catalog-item">
+                <div class="catalog-item animate__animated animate__fadeIn wow" data-wow-duration="0.7s"
+                    data-wow-delay="0.6s">
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
                             <img src="img/catalog-item.jpg" alt="pulsometr" class="catalog-item__img">
@@ -396,7 +405,8 @@
                     </div>
                 </div>
 
-                <div class="catalog-item">
+                <div class="catalog-item animate__animated animate__fadeIn wow" data-wow-duration="0.7s"
+                    data-wow-delay="0.6s">
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
                             <img src="img/catalog-item.jpg" alt="pulsometr" class="catalog-item__img">
@@ -597,7 +607,8 @@
                 отзывы клиентов
             </h2>
             <div class="reviews__wrapper">
-                <div class="reviews-item">
+                <div class="reviews-item animate__animated animate__fadeInUp wow" data-wow-duration="1s"
+                    data-wow-delay="0.2s">
                     <div class="reviews-item__block-img">
                         <img src="img/reviews-item-1.png" alt="reviews-img" class="reviews-item__img">
                     </div>
@@ -621,7 +632,8 @@
                 </div>
 
 
-                <div class="reviews-item">
+                <div class="reviews-item animate__animated animate__fadeInUp wow" data-wow-duration="2s"
+                    data-wow-delay="0.5s">
                     <img src="img/reviews-item-2.png" alt="reviews-img" class="reviews-item__img">
                     <div class="reviews-item__block-descr">
                         <div class="reviews-item__subtitle">
@@ -643,7 +655,8 @@
                 </div>
 
 
-                <div class="reviews-item">
+                <div class="reviews-item animate__animated animate__fadeInUp wow" data-wow-duration="2s"
+                    data-wow-delay="0.7s">
                     <div class="reviews-item__block-img">
                         <img src="img/reviews-item-3.png" alt="reviews-img" class="reviews-item__img">
                     </div>
@@ -672,11 +685,10 @@
     </section>
 
     <footer class="footer">
-        <div class="footer__map">
-            <iframe
+        <div>
+            <iframe class="footer__map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2029.2928318145907!2d24.765369869693416!3d59.428190529167395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469294a6ffc13169%3A0xd0a8811a1e78b4ea!2sJuhkentali%2023%2C%2010144%20Tallinn!5e0!3m2!1sru!2see!4v1661339845188!5m2!1sru!2see"
-                width="100%" height="630" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="footer__info">
             <address class="footer__address">
@@ -710,7 +722,7 @@
             </div>
             <form action="#" method="post" class="feed__form">
                 <input placeholder="Ваше имя" type="text" name="name">
-                <input placeholder="Ваш телефон" name="tel">
+                <input placeholder="Ваш телефон" name="phone">
                 <input placeholder="Ваш E-mail" type="email" name="email">
                 <button class="button_submit button">заказать консультацию</button>
             </form>
@@ -727,9 +739,9 @@
                 Пульсометр Polar FT1
             </div>
             <form action="#" method="post" class="feed__form feed__form_modal">
-                <input placeholder="Ваше имя" required type="text" name="name">
-                <input placeholder="Ваш телефон" required name="tel">
-                <input placeholder="Ваш E-mail" required type="email" name="email">
+                <input placeholder="Ваше имя" type="text" name="name">
+                <input placeholder="Ваш телефон" name="phone">
+                <input placeholder="Ваш E-mail" type="email" name="email">
                 <button class="button_submit button">Купить</button>
             </form>
         </div>
@@ -745,13 +757,20 @@
                 Наш менеджер свяжется с вами в ближайшее время!
             </div>
         </div>
-
     </div>
+
+    <a href="#up" class="pageup">
+        <img src="icons/chevron.svg" alt="chevron">
+    </a>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
     <script src="js/script.js"></script>
 </body>
 
